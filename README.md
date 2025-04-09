@@ -159,7 +159,7 @@ An example of a start script can be found in [experiments/train.py](experiments/
 You can run your model by the following command:
 
 ```bash
-python experiments/train.py -c /path/to/your/config/file.py --gpus '0'
+python train.py -c /path/to/your/config/file.py --gpus '0'
 ```
 
 
@@ -170,30 +170,19 @@ python experiments/train.py -c /path/to/your/config/file.py --gpus '0'
 BasicTS provides a wealth of built-in models. You can find all the built-in models and their corresponding runners in [`basicts/archs/arch_zoo`](basicts/archs/arch_zoo/) and [`basicts/runners/runner_zoo`](basicts/runners/runner_zoo/), respectively. You can reproduce these models by running the following command:
 
 ```bash
-python experiments/train.py -c baselines/${MODEL_NAME}/${MODEL_NAME}_${DATASET_NAME}.py --gpus '0'
+python train.py -c baselines/${MODEL_NAME}/${MODEL_NAME}_${DATASET_NAME}.py --gpus '0'
 ```
 
 Replace `${DATASET_NAME}` and `${MODEL_NAME}` with any supported models and datasets. For example, you can run Graph WaveNet on METR-LA dataset by:
 
 ```bash
-python experiments/train.py -c baselines/GWNet/GWNet_METR-LA.py --gpus '0'
+python train.py -c baselines/GWNet/GWNet_METR-LA.py --gpus '0'
 ```
 
 ### Customized Your Own Model
 
 - [Multi-Layer Perceptron (MLP)](baselines/MLP)
 - More...
-
-
-## 📉 Main Results
-
-### Spatial-Temporal Forecasting
-
-![STF results.](assets/STF_results.png)
-
-### Long Time- Series Forecasting
-
-![LTSF results.](assets/LTSF_results.png)
 
 ## 📦 Checkpoints
 
